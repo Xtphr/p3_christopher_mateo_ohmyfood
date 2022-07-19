@@ -6,6 +6,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
         <!-- CSS Normalize -->
+        <link rel="stylesheet" type="text/css" href="./css/normalize.css">
         <!-- CSS (mobile first) -->
         <link rel="stylesheet" type="text/css" href="./css/style.css">
         <!-- CSS (tablet & desktop) -->
@@ -25,36 +26,36 @@
             <section class="top-container">
                 <!-- Location -->
                 <div class="top-container__location">
-                    <p><i id="location-dot" class="fa-solid fa-location-dot"></i> Paris, Belleville</p>
+                    <p><i class="fa-solid fa-location-dot"></i> Paris, Belleville</p>
                 </div>
                 <!-- Searching block -->
                 <div class="top-container__reservation">
                     <h1>Réservez le menu qui vous convient</h1>
-                    <p>Découvrez des restaurants d'exception, sélectionnés par nos soins</p>
-                <button class="top-container__btn">Explorez nos restaurants</button>    
+                    <p>Découvrez des restaurants d'exception, sélectionnés par nos soins.</p>
+                <button class="top-container__btn">Explorer nos restaurants</button>    
                 </div>
             </section>
 
             <!-- Second section : Running block -->
             <section class="process">
-                <h2 class="process-heading">Fonctionnement</h2>
+                <h2 class="process__heading">Fonctionnement</h2>
                 <!-- Step 1 -->
                 <div class="process-steps">
-                    <p class="proces-steps__nbr">1</p><p class="process-steps__picto"><i class="fa-solid fa-mobile-screen"></i></p><p class="process-steps__txt">Choisissez un restaurant</p>
+                    <p class="process-steps__nbr">1</p><p class="process-steps__picto"><i class="fa-solid fa-mobile-screen"></i></p><p class="process-steps__txt">Choisissez un restaurant</p>
                 </div>
                 <!-- Step 2 -->
                 <div class="process-steps">
                     <p class="process-steps__nbr">2</p><p class="process-steps__picto"><i class="fa-solid fa-list"></i></p><p class="process-steps__txt">Composez votre menu</p>
                 </div>
                 <!-- Step 3 -->
-                <div class="process__steps">
+                <div class="process-steps">
                     <p class="process-steps__nbr">3</p><p class="process-steps__picto"><i class="fa-solid fa-store"></i></p><p class="process-steps__txt">Dégustez au restaurant</p>
                 </div>
             </section>
 
             <!-- Third section : Restaurants' list -->
             <section class="restaurants">
-                <h2 class="restaurants-heading">Restaurants</h2>
+                <h2 class="restaurants__heading">Restaurants</h2>
 
                 <!-- Restaurant "La palette du goût" -->
                 <figure class="restaurants-cards">
@@ -63,9 +64,9 @@
                         <p class="restaurants-cards__img--new">Nouveau</p>
                     </div>
                     <figcaption class="restaurants-cards__info">
-                        <h3 class="restaurants-cards__name">La palette du goût</h3>
-                        <p class="restaurants-cards__place">Ménilmontant</p>
-                        <p class="restaurants-cards__picto"><i class="fa-solid fa-heart"></i></p>
+                        <div class="restaurants-cards__txt"><h3 class="restaurants-cards__name">La palette du goût</h3>
+                        <p class="restaurants-cards__place">Ménilmontant</p></div>
+                        <p class="restaurants-cards__picto"><i class="fa-regular fa-heart"></i></p>
                     </figcaption>
                 </figure>
 
@@ -76,9 +77,9 @@
                         <p class="restaurants-cards__img--new">Nouveau</p>
                     </div>
                     <figcaption class="restaurants-cards__info">
-                        <h3 class="restaurants-cards__name">La note enchantée</h3>
-                        <p class="restaurants-cards__place">Charonne</p>
-                        <p class="restaurants-cards__picto"><i class="fa-solid fa-heart"></i></p>
+                        <div class="restaurants-cards__txt"><h3 class="restaurants-cards__name">La note enchantée</h3>
+                        <p class="restaurants-cards__place">Charonne</p></div>
+                        <p class="restaurants-cards__picto"><i class="fa-regular fa-heart"></i></p>
                     </figcaption>
                 </figure>
 
@@ -88,9 +89,9 @@
                     <img src="./images/restaurants/ala-francaise.jpg" alt="restaurant-a-la-francaise">
                     </div>
                     <figcaption class="restaurants-cards__info">
-                        <h3 class="restaurants-cards__name">À la française</h3>
-                        <p class="restaurants-cards__place">Cité rouge</p>
-                        <p class="restaurants-cards__picto"><i class="fa-solid fa-heart"></i></p>
+                        <div class="restaurants-cards__txt"><h3 class="restaurants-cards__name">À la française</h3>
+                        <p class="restaurants-cards__place">Cité rouge</p></div>
+                        <p class="restaurants-cards__picto"><i class="fa-regular fa-heart"></i></p>
                     </figcaption>
                 </figure>
 
@@ -100,16 +101,16 @@
                     <img src="./images/restaurants/delices-des-sens.jpg" alt="restaurant-le-delice-des-sens">
                     </div>
                     <figcaption class="restaurants-cards__info">
-                        <h3 class="restaurants-cards__name">Le délice des sens</h3>
-                        <p class="restaurants-cards__place">Folie-Méricourt</p>
-                        <p class="restaurants-cards__picto"><i class="fa-solid fa-heart"></i></p>
+                        <div class="restaurants-cards__txt"><h3 class="restaurants-cards__name">Le délice des sens</h3>
+                        <p class="restaurants-cards__place">Folie-Méricourt</p></div>
+                        <p class="restaurants-cards__picto"><i class="fa-regular fa-heart"></i></p>
                     </figcaption>
                 </figure>
             </section>
         </main>
         <!-- Footer -->
         <footer>
-            <img src="./images/logo/ohmyfood.png" alt="logo-ohmyfood">
+            <h2>ohmyfood</h2>
             <ul>
                 <li><i class="fa-solid fa-utensils"></i>Proposer un restaurant</li>
                 <li><i class="fa-solid fa-handshake-angle"></i>Devenir partenaire</li>
