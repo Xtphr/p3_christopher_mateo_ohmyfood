@@ -4,20 +4,25 @@
   box-sizing: border-box;
 }
 
+/* Header */
 header {
   text-align: center;
   padding: 20px 0 10px 0;
+  /* Logo */
 }
 header img {
   width: 50%;
 }
 
+/* First section : Reservation */
 .top-container {
   width: 100%;
   text-align: center;
   display: flex;
   flex-direction: column;
   justify-content: center;
+  /* Location */
+  /* Searching block */
 }
 .top-container__location {
   background-color: #eaeaea;
@@ -47,6 +52,7 @@ header img {
   width: 250px;
 }
 
+/* Second section : Running block */
 .process {
   display: flex;
   flex-direction: column;
