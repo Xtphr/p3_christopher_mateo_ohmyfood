@@ -6,7 +6,9 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
         <!-- CSS Normalize -->
+        <link rel="stylesheet" type="text/css" href="./css/normalize.css">
         <!-- CSS (mobile first) -->
+        <link rel="stylesheet" type="text/css" href="./css/pages.css">
         <!-- CSS (tablet & desktop) -->
         <!-- Fontawesome -->
         <script src="https://kit.fontawesome.com/064a8af3d3.js" crossorigin="anonymous"></script>
@@ -18,111 +20,107 @@
         <header>
             <!-- Navigation bar -->
             <nav>
-                <div class="nav-return-button">
-                    <p><a href="./index.html"><i class="fa-solid fa-arrow-left"></i></a></p>
-                </div>
-                <div class="nav-logo">
-                    <img src="./images/logo/ohmyfood.png" alt="logo-ohmyfood">
-                </div>
+                <p><a href="./index.html"><i class="fa-solid fa-arrow-left"></i></a></p>
+                <img src="./images/logo/ohmyfood.png" alt="logo-ohmyfood">
             </nav>
         </header>
         <main>
             <!-- Banner -->
-            <section>
+            <section class="banner">
                 <img src="./images/restaurants/note-enchantee.jpg">
             </section>
             <!-- Restaurant's menu heading -->
-            <section>
-                <div class="heading">
+            <section class="menu">
+                <div class="menu__heading">
                     <h1>La note enchantée</h1>
                     <p><i class="fa-regular fa-heart"></i></p>
                 </div>
                 <!-- Starters -->
-                <article class="menu">
+                <article class="menu__list">
                     <h2>Entrées</h2>
                         <!-- "Ravioles de foie gras" -->
-                        <div class="menu-starter">
-                            <h3>Ravioles de foie gras</h3>
-                            <p>Accompagnés de leur crème à la truffe</p>
-                            <p>25€</p>
+                        <div class="menu__box">
+                            <div class="menu__entitled"><h3>Ravioles de foie gras</h3>
+                            <p>Accompagnés de leur crème à la truffe</p></div>
+                            <div class="menu__price"><p>25€</p></div>
                         </div>
                         <!-- "Caviar osciètre" -->
-                        <div class="menu-starter">
-                            <h3>Caviar osciètre</h3>
-                            <p>Sur blini à la farine de blé noir</p>
-                            <p>35€</p>
+                        <div class="menu__box">
+                            <div class="menu__entitled"><h3>Caviar osciètre</h3>
+                            <p>Sur blini à la farine de blé noir</p></div>
+                            <div class="menu__price"><p>35€</p></div>
                         </div>
                         <!-- "Homard et espuma de potiron" -->
-                        <div class="menu-starter">
-                            <h3>Homard et espuma de potiron</h3>
-                            <p>Mariné aux zestes d'orange</p>
-                            <p>20€</p>
+                        <div class="menu__box">
+                            <div class="menu__entitled"><h3>Homard et espuma de potiron</h3>
+                            <p>Mariné aux zestes d'orange</p></div>
+                            <div class="menu__price"><p>20€</p></div>
                         </div>
                         <!-- Foie gras de canard cuit entier -->
-                        <div class="menu-starter">
-                            <h3>Foie gras de canard cuit entier</h3>
-                            <p>Confiture de figue et pain toasté</p>
-                            <p>35€</p>
+                        <div class="menu__box">
+                            <div class="menu__entitled"><h3>Foie gras de canard cuit entier</h3>
+                            <p>Confiture de figue et pain toasté</p></div>
+                            <div class="menu__price"><p>35€</p></div>
                         </div>
                 </article>
                 <!-- Main dishes -->
-                <article class="menu">
+                <article class="menu__list">
                     <h2>Plats</h2>
                         <!-- "Noix de coquilles Saint-Jacques" -->
-                        <div class="menu-main">
-                            <h3>Noix de coquilles Saint-Jacques</h3>
-                            <p>Sur lit de purée de céleri-rave</p>
-                            <p>40€</p>
+                        <div class="menu__box">
+                            <div class="menu__entitled"><h3>Noix de coquilles Saint-Jacques</h3>
+                            <p>Sur lit de purée de céleri-rave</p></div>
+                            <div class="menu__price"><p>40€</p></div>
                         </div>
                         <!-- "Langoustine poêlée" -->
-                        <div class="menu-main">
-                            <h3>Langoustine poêlée</h3>
-                            <p>Purée de patate douce</p>
-                            <p>35€</p>
+                        <div class="menu__box">
+                            <div class="menu__entitled"><h3>Langoustine poêlée</h3>
+                            <p>Purée de patate douce</p></div>
+                            <div class="menu__price"><p>35€</p></div>
                         </div>
                         <!-- "Mijoté de queue de boeuf" -->
-                        <div class="menu-main">
-                            <h3>Mijoté de queue de boeuf</h3>
-                            <p>Et riz sauvage aux zestes de citron</p>
-                            <p>44€</p>
+                        <div class="menu__box">
+                            <div class="menu__entitled"><h3>Mijoté de queue de boeuf</h3>
+                            <p>Et riz sauvage aux zestes de citron</p></div>
+                            <div class="menu__price"><p>44€</p></div>
                         </div>
                 </article>
                 <!-- Desserts -->
-                <article class="menu">
+                <article class="menu__list">
                     <h2>Desserts</h2>
                         <!-- "Macaron noisette et chocolat" -->
-                        <div class="menu-dessert">
-                            <h3>Macaron noisette et chocolat</h3>
-                            <p>Glace au caramel brun et sel de Guérande</p>
-                            <p>18€</p>
+                        <div class="menu__box">
+                            <div class="menu__entitled"><h3>Macaron noisette et chocolat</h3>
+                            <p>Glace au caramel brun et sel de Guérande</p></div>
+                            <div class="menu__price"><p>18€</p></div>
                         </div>
                         <!-- "Baba au rhum revisité" -->
-                        <div class="menu-dessert">
-                            <h3>Baba au rhum revisité</h3>
-                            <p>Avec son coulis de citron</p>
-                            <p>22€</p>
+                        <div class="menu__box">
+                            <div class="menu__entitled"><h3>Baba au rhum revisité</h3>
+                            <p>Avec son coulis de citron</p></div>
+                            <div class="menu__price"><p>22€</p></div>
                         </div>
                         <!-- "Tarte au citron meringuée" -->
-                        <div class="menu-dessert">
-                            <h3>Tarte au citron meringuée</h3>
-                            <p>Déstructurée</p>
-                            <p>23€</p>
+                        <div class="menu__box">
+                            <div class="menu__entitled"><h3>Tarte au citron meringuée</h3>
+                            <p>Déstructurée</p></div>
+                            <div class="menu__price"><p>23€</p></div>
                         </div>
                 </article>
                 <!-- Menu command button -->
-                <div class="menu-button">
+                <div class="menu__button">
                     <button>Commander</button>
                 </div>
             </section>
         </main>
         <!-- Footer -->
         <footer>
-            <img src="./images/logo/ohmyfood.png" alt="logo-ohmyfood">
+            <h2 id="footer">ohmyfood</h2>
             <ul>
-                <li><i class="fa-solid fa-utensils"></i>Proposer un restaurant</li>
-                <li><i class="fa-solid fa-handshake-angle"></i>Devenir partenaire</li>
-                <li>Mentions légales</li>
-                <li>Contact</li>
+                <li><a href="#footer"><i class="fa-solid fa-utensils"></i>Proposer un restaurant</a></li>
+                <li><a href="#footer"><i class="fa-solid fa-handshake-angle"></i>Devenir partenaire</a></li>
+                <li><a href="#footer">Mentions légales</a></li>
+                <li><a href="#footer">Contact</a></li>
             </ul>
         </footer>
     </body>

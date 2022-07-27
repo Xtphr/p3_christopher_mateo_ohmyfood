@@ -26,13 +26,16 @@
             <section class="top-container">
                 <!-- Location -->
                 <div class="top-container__location">
-                    <p><i class="fa-solid fa-location-dot"></i> Paris, Belleville</p>
+                    <!--<p><i class="fa-solid fa-location-dot"></i>Paris, Belleville</p>-->
+                
+				<form><label><i class="fa-solid fa-location-dot"></i></label>
+                    <input type="text" name="Ville" placeholder="Paris, Belleville"></form>
                 </div>
                 <!-- Searching block -->
                 <div class="top-container__reservation">
                     <h1>Réservez le menu qui vous convient</h1>
                     <p>Découvrez des restaurants d'exception, sélectionnés par nos soins.</p>
-                <button class="top-container__btn">Explorer nos restaurants</button>    
+                <a href="#restaurants"><button class="top-container__btn">Explorer nos restaurants</button></a>
                 </div>
             </section>
 
@@ -54,11 +57,12 @@
             </section>
 
             <!-- Third section : Restaurants' list -->
-            <section class="restaurants">
+            <section class="restaurants" id="restaurants">
                 <h2 class="restaurants__heading">Restaurants</h2>
 
                 <!-- Restaurant "La palette du goût" -->
-                <figure class="restaurants-cards">
+                
+                    <figure class="restaurants-cards"><a href="./lapalettedugout.html">
                     <div class="restaurants-cards__img">
                         <img src="./images/restaurants/palette-du-gout.jpg" alt="restaurant-palette-du-gout">
                         <p class="restaurants-cards__img--new">Nouveau</p>
@@ -68,10 +72,11 @@
                         <p class="restaurants-cards__place">Ménilmontant</p></div>
                         <p class="restaurants-cards__picto"><i class="fa-regular fa-heart"></i></p>
                     </figcaption>
-                </figure>
+                    </a></figure>
+                
 
                 <!-- Restaurant "La note enchantée" -->
-                <figure class="restaurants-cards">
+                <figure class="restaurants-cards"><a href="./lanoteenchantee.html">
                     <div class="restaurants-cards__img">
                         <img src="./images/restaurants/note-enchantee.jpg" alt="restaurant-note-enchantee">
                         <p class="restaurants-cards__img--new">Nouveau</p>
@@ -81,10 +86,11 @@
                         <p class="restaurants-cards__place">Charonne</p></div>
                         <p class="restaurants-cards__picto"><i class="fa-regular fa-heart"></i></p>
                     </figcaption>
-                </figure>
+                </a></figure>
+                
 
                 <!-- Restaurant "À la française" -->
-                <figure class="restaurants-cards">
+                <figure class="restaurants-cards"><a href="./alafrancaise.html">
                     <div class="restaurants-cards__img">
                     <img src="./images/restaurants/ala-francaise.jpg" alt="restaurant-a-la-francaise">
                     </div>
@@ -93,10 +99,11 @@
                         <p class="restaurants-cards__place">Cité rouge</p></div>
                         <p class="restaurants-cards__picto"><i class="fa-regular fa-heart"></i></p>
                     </figcaption>
-                </figure>
+                </a></figure>
+                
 
                 <!-- Restaurant "Le délice des sens" -->
-                <figure class="restaurants-cards">
+                <figure class="restaurants-cards"><a href="./ledelicedessens.html">
                     <div class="restaurants-cards__img">
                     <img src="./images/restaurants/delices-des-sens.jpg" alt="restaurant-le-delice-des-sens">
                     </div>
@@ -105,17 +112,18 @@
                         <p class="restaurants-cards__place">Folie-Méricourt</p></div>
                         <p class="restaurants-cards__picto"><i class="fa-regular fa-heart"></i></p>
                     </figcaption>
-                </figure>
+                </a></figure>
+                
             </section>
         </main>
         <!-- Footer -->
         <footer>
-            <h2>ohmyfood</h2>
+            <h2 id="footer">ohmyfood</h2>
             <ul>
-                <li><i class="fa-solid fa-utensils"></i>Proposer un restaurant</li>
-                <li><i class="fa-solid fa-handshake-angle"></i>Devenir partenaire</li>
-                <li>Mentions légales</li>
-                <li>Contact</li>
+                <li><a href="#footer"><i class="fa-solid fa-utensils"></i>Proposer un restaurant</a></li>
+                <li><a href="#footer"><i class="fa-solid fa-handshake-angle"></i>Devenir partenaire</a></li>
+                <li><a href="#footer">Mentions légales</a></li>
+                <li><a href="#footer">Contact</a></li>
             </ul>
         </footer>
     </body>
