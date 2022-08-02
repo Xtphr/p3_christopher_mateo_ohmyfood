@@ -94,6 +94,9 @@ header{
     height: 80px;
     &:hover{
         background-color: #f5edff;
+        .process-steps__picto{
+            color: $primary-color;
+        }
     }
     &__nbr{
         background-color: $primary-color;
@@ -212,4 +215,164 @@ footer{
     & li i{
         width: 30px;
     }
+}
+
+
+/* Responsive design : tablet */
+@media all and (min-width: 768px) and (max-width: 992px){
+
+    header{
+        height: 150px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        img{
+            max-width: 350px;
+        }
+    }
+
+    .top-container{
+        &__location{
+        height: 80px;
+        font-size: x-large;
+        input{
+            width: 220px;
+            padding: 10px;
+        }
+        }
+    }
+
+    .process{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    &__heading{
+        width: 100%;
+        margin: 0 0 50px 0;
+        padding: 0;
+        text-align: center;
+    }
+}
+
+    .process-steps{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 200px;
+    width: 200px;
+    &__nbr{
+        margin: -90px 0 20px 0;
+        padding: 10px 15px;
+        border-radius: 50px;
+    }
+    &__picto{
+        margin: 10px 0;
+    }
+
+}
+
+.restaurants{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    &__heading{
+        width: 100%;
+        text-align: center;
+        padding: 0;
+        margin: 10px 0 40px 0;
+    }
+}
+
+.restaurants-cards{
+    width: 45%;
+    margin: 15px 15px;
+}
+
+footer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+} 
+
+/* Responsive design : desktop */
+@media all and (min-width: 992px){
+    header{
+        height: 100px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        img{
+            max-width: 350px;
+        }
+    }
+    .top-container{
+        input{
+            padding: 10px;
+            width: 150px;
+        }
+    }
+.process{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    &__heading{
+        width: 100%;
+        margin: 0 0 50px 0;
+        padding: 0;
+        text-align: center;
+    }
+}
+.process-steps{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 150px;
+    width: 30%;
+        &__nbr{
+        margin: -40px 0 20px 0;
+        padding: 10px 15px;
+        border-radius: 50px;
+    }
+    &__picto{
+        margin: 10px 0;
+    }
+}
+.restaurants{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    &__heading{
+        width: 100%;
+        text-align: center;
+        padding: 0;
+        margin: 10px 0 40px 0;
+    }
+}
+
+.restaurants-cards{
+    height: 300px;
+    width: 20%;
+    min-width: 300px;
+    max-width: 400px;
+    margin: 10px;
+    a{
+        height: 300px; 
+    }
+}
+footer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+    text-align: right;
+}
 }
