@@ -1,10 +1,127 @@
+/*____________________________IMPORTS__________________________*/
+/*_____________________________Fonts___________________________*/
 @import url("https://fonts.googleapis.com/css2?family=Roboto&family=Shrikhand&display=swap");
 * {
   font-family: "Roboto", Verdana, Arial, Sans-Serif;
   box-sizing: border-box;
 }
 
-/* Header */
+/*____________________________VARIABLES__________________________*/
+/*_____________________________$colors___________________________*/
+/*____________________________KEYFRAMES__________________________*/
+/*____________________Loader global animation____________________*/
+@keyframes loader-duration {
+  0% {
+    visibility: visible;
+    z-index: 10;
+  }
+  99% {
+    visibility: visible;
+    z-index: 10;
+  }
+  100% {
+    visibility: hidden;
+    z-index: -10;
+  }
+}
+/*____________________Loader jumping ustensils____________________*/
+@keyframes loader-jump {
+  0% {
+    transform: translateY(0);
+    color: #FF79DA;
+  }
+  25% {
+    transform: translateY(-20px);
+    color: #9356DC;
+  }
+  50% {
+    transform: translateY(0);
+    color: #FF79DA;
+  }
+  75% {
+    transform: translateY(-40px);
+    color: #9356DC;
+  }
+  100% {
+    transform: translateY(0px);
+    color: #FF79DA;
+  }
+}
+/*____________________Loader highlighting logo____________________*/
+@keyframes loader-highlight {
+  0% {
+    color: #9356DC;
+    text-shadow: 0 0 0.1rem #9356DC;
+  }
+  50% {
+    color: #FF79DA;
+    text-shadow: 0 0 0.1rem #FF79DA;
+  }
+  90% {
+    color: black;
+    text-shadow: none;
+  }
+  100% {
+    color: #9356DC;
+    text-shadow: 0 0 0.5rem #9356DC;
+  }
+}
+/*____________________________CONTENT__________________________*/
+/*_______________________Home page loader______________________*/
+.loader {
+  position: fixed;
+  z-index: 10;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(153, 226, 208, 0.95);
+  animation: loader-duration 3s forwards;
+  letter-spacing: 5px;
+}
+.loader__letter {
+  font-family: "Shrikhand", Verdana, Sans-Serif;
+  color: black;
+  font-size: 30px;
+  vertical-align: bottom;
+  animation: loader-highlight 3s linear infinite;
+}
+.loader__letter:nth-child(1) {
+  animation-delay: 0.1s;
+}
+.loader__letter:nth-child(2) {
+  animation-delay: 0.2s;
+}
+.loader__letter:nth-child(3) {
+  animation-delay: 0.3s;
+}
+.loader__letter:nth-child(4) {
+  animation-delay: 0.4s;
+}
+.loader__letter:nth-child(5) {
+  animation-delay: 0.5s;
+}
+.loader__letter:nth-child(6) {
+  animation-delay: 0.6s;
+}
+.loader__letter:nth-child(7) {
+  animation-delay: 0.7s;
+}
+.loader__letter:nth-child(8) {
+  animation-delay: 0.8s;
+}
+.loader__letter:nth-child(9) {
+  animation-delay: 0.9s;
+}
+.loader__picto {
+  margin: 0 10px;
+  font-size: 40px;
+  animation: loader-jump infinite 1s ease-in-out both;
+  vertical-align: bottom;
+}
+
+/*_______________________Header______________________*/
 header {
   text-align: center;
   padding: 20px 0 10px 0;
@@ -16,15 +133,15 @@ header img {
   max-width: 300px;
 }
 
-/* First section : Reservation */
+/*___________First section : reservation_____________*/
 .top-container {
   width: 100%;
   text-align: center;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  /* Location */
-  /* Searching block */
+  /*________________Location_______________________*/
+  /*________________Searching block___________________*/
 }
 .top-container__location {
   display: flex;
@@ -38,6 +155,7 @@ header img {
   background-color: #eaeaea;
   border: none;
   width: 140px;
+  padding: 5px;
 }
 .top-container__location ::placeholder {
   color: black;
@@ -67,8 +185,12 @@ header img {
   width: 250px;
   cursor: pointer;
 }
+.top-container__btn:hover {
+  box-shadow: 0px 2px 10px rgb(50, 50, 50);
+  opacity: 0.9;
+}
 
-/* Second section : Running block */
+/*___________Second section : Running block_____________*/
 .process {
   display: flex;
   flex-direction: column;
@@ -91,6 +213,10 @@ header img {
 }
 .process-steps:hover {
   background-color: #f5edff;
+  box-shadow: 0px 2px 10px rgb(135, 133, 133);
+}
+.process-steps:hover .process-steps__picto {
+  color: #9356DC;
 }
 .process-steps__nbr {
   background-color: #9356DC;
@@ -109,6 +235,7 @@ header img {
   font-weight: bold;
 }
 
+/*___________Third section : Restaurant's list_____________*/
 .restaurants {
   display: flex;
   flex-direction: column;
@@ -128,6 +255,10 @@ header img {
   height: 250px;
   width: 90%;
   border-radius: 15px;
+}
+.restaurants-cards:hover, .restaurants-cards:active {
+  box-shadow: 0px 2px 10px rgb(50, 50, 50);
+  opacity: 0.9;
 }
 .restaurants-cards a {
   height: 250px;
@@ -183,11 +314,36 @@ header img {
 .restaurants-cards__place {
   margin: 0;
 }
-.restaurants-cards__picto {
-  margin: 0;
+.restaurants-cards__heart {
+  position: relative;
+  right: 5px;
+  width: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   font-size: x-large;
 }
+.restaurants-cards__heart--full {
+  position: absolute;
+  font-size: x-large;
+  background: linear-gradient(#9356DC, #FF79DA);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  z-index: 2;
+  opacity: 0;
+  transition: opacity 400ms;
+}
+.restaurants-cards__heart--full:hover, .restaurants-cards__heart--full:active {
+  opacity: 1;
+}
+.restaurants-cards__heart--empty {
+  position: absolute;
+  font-size: x-large;
+  z-index: 1;
+}
 
+/*____________________Footer_____________________*/
 footer {
   background-color: #353535;
   color: white;
@@ -206,6 +362,232 @@ footer ul {
 }
 footer li i {
   width: 30px;
+}
+
+/*____________________________MEDIA QUERIES_________________________*/
+/*_____________________Responsive design : tablet___________________*/
+@media all and (min-width: 768px) and (max-width: 992px) {
+  header {
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  header img {
+    max-width: 350px;
+  }
+  .top-container__location {
+    height: 80px;
+    font-size: x-large;
+  }
+  .top-container__location input {
+    width: 220px;
+    padding: 10px;
+  }
+  .process {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+  .process__heading {
+    width: 100%;
+    margin: 0 0 50px 0;
+    padding: 0;
+    text-align: center;
+  }
+  .process-steps {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 200px;
+    width: 200px;
+  }
+  .process-steps__nbr {
+    margin: -90px 0 20px 0;
+    padding: 10px 15px;
+    border-radius: 50px;
+  }
+  .process-steps__picto {
+    margin: 10px 0;
+  }
+  .restaurants {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  .restaurants__heading {
+    width: 100%;
+    text-align: center;
+    padding: 0;
+    margin: 10px 0 40px 0;
+  }
+  .restaurants-cards {
+    width: 45%;
+    margin: 15px 15px;
+  }
+  footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+}
+/*_____________________Responsive design : laptop___________________*/
+@media all and (min-width: 992px) and (max-width: 1282px) {
+  header {
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  header img {
+    max-width: 350px;
+  }
+  .top-container input {
+    padding: 10px;
+    width: 150px;
+  }
+  .process {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+  .process__heading {
+    width: 100%;
+    margin: 0 0 50px 0;
+    padding: 0;
+    text-align: center;
+  }
+  .process-steps {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 150px;
+    width: 30%;
+  }
+  .process-steps__nbr {
+    margin: -40px 0 20px 0;
+    padding: 10px 15px;
+    border-radius: 50px;
+  }
+  .process-steps__picto {
+    margin: 10px 0;
+  }
+  .restaurants {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+  }
+  .restaurants__heading {
+    width: 100%;
+    text-align: center;
+    padding: 0;
+    margin: 10px 0 40px 0;
+  }
+  .restaurants-cards {
+    height: 300px;
+    width: 40%;
+    min-width: 300px;
+    max-width: 500px;
+    margin: 20px;
+  }
+  .restaurants-cards a {
+    height: 300px;
+  }
+  footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+    text-align: right;
+  }
+  footer i {
+    margin-right: 5px;
+  }
+}
+/*_____________________Responsive design : desktop___________________*/
+@media all and (min-width: 1282px) {
+  header {
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  header img {
+    max-width: 350px;
+  }
+  .top-container input {
+    padding: 10px;
+    width: 150px;
+  }
+  .process {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+  .process__heading {
+    width: 100%;
+    margin: 0 0 50px 0;
+    padding: 0;
+    text-align: center;
+  }
+  .process-steps {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 150px;
+    width: 30%;
+  }
+  .process-steps__nbr {
+    margin: -40px 0 20px 0;
+    padding: 10px 15px;
+    border-radius: 50px;
+  }
+  .process-steps__picto {
+    margin: 10px 0;
+  }
+  .restaurants {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+  }
+  .restaurants__heading {
+    width: 100%;
+    text-align: center;
+    padding: 0;
+    margin: 10px 0 40px 0;
+  }
+  .restaurants-cards {
+    height: 300px;
+    width: 20%;
+    min-width: 300px;
+    max-width: 400px;
+    margin: 10px;
+  }
+  .restaurants-cards a {
+    height: 300px;
+  }
+  footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+    text-align: right;
+  }
+  footer i {
+    margin-right: 5px;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

@@ -1,7 +1,14 @@
+/*____________________________IMPORTS__________________________*/
+
+/*_____________________________Fonts___________________________*/
 @import url('https://fonts.googleapis.com/css2?family=Roboto&family=Shrikhand&display=swap');
 *{font-family: "Roboto", Verdana, Arial, Sans-Serif;
 box-sizing: border-box;}
 
+
+/*____________________________VARIABLES__________________________*/
+
+/*_____________________________$colors___________________________*/
 $primary-color: #9356DC;
 $secondary-color: #FF79DA;
 $tertiary-color: #99E2D0;
@@ -9,7 +16,125 @@ $bg-grey: #eaeaea;
 $bg-lightgrey: #f6f6f6;
 $bg-darkgrey: #353535;
 
-/* Header */
+/*____________________________KEYFRAMES__________________________*/
+
+/*____________________Loader global animation____________________*/
+@keyframes loader-duration{
+    0%{
+        visibility: visible;
+        z-index: 10;
+    }
+    99%{
+        visibility: visible;
+        z-index: 10;
+    }
+    100%{
+        visibility: hidden;
+        z-index: -10;
+    }
+}
+
+/*____________________Loader jumping ustensils____________________*/
+@keyframes loader-jump{
+    0%{
+        transform: translateY(0);
+        color: $secondary-color;
+    }
+    25%{
+        transform: translateY(-20px);
+        color: $primary-color;
+    }
+    50%{
+        transform: translateY(0);
+        color: $secondary-color;
+    }
+    75%{
+        transform: translateY(-40px);
+        color: $primary-color;
+    }
+    100%{
+        transform: translateY(0px);
+        color: $secondary-color;
+    }
+}
+
+/*____________________Loader highlighting logo____________________*/
+@keyframes loader-highlight {
+    0% {
+      color: $primary-color;
+      text-shadow: 0 0 .1rem $primary-color;
+    }
+    50% {
+      color: $secondary-color;
+      text-shadow: 0 0 .1rem $secondary-color;
+    }
+    90% {
+      color: black;
+      text-shadow: none;
+    }
+    100% {
+      color: $primary-color;
+      text-shadow: 0 0 .5rem $primary-color;
+    }
+  }
+
+/*____________________________CONTENT__________________________*/
+
+/*_______________________Home page loader______________________*/
+.loader{
+    position: fixed;
+    z-index: 10;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(153, 226, 208, 0.95);
+    animation: loader-duration 3s forwards;
+    letter-spacing: 5px;
+    &__letter{
+        font-family: "Shrikhand", Verdana, Sans-Serif;
+        color: black;
+        font-size: 30px;
+        vertical-align: bottom;
+        animation: loader-highlight 3s linear infinite;
+        &:nth-child(1){
+            animation-delay: 0.1s;
+        }
+        &:nth-child(2){
+            animation-delay: 0.2s;
+        }
+        &:nth-child(3){
+            animation-delay: 0.3s;
+        }
+        &:nth-child(4){
+            animation-delay: 0.4s;
+        }
+        &:nth-child(5){
+            animation-delay: 0.5s;
+        }
+        &:nth-child(6){
+            animation-delay: 0.6s;
+        }
+        &:nth-child(7){
+            animation-delay: 0.7s;
+        }
+        &:nth-child(8){
+            animation-delay: 0.8s;
+        }
+        &:nth-child(9){
+            animation-delay: 0.9s;
+        }
+    }
+    &__picto{
+        margin: 0 10px;
+        font-size: 40px;
+        animation: loader-jump infinite 1s ease-in-out both;
+        vertical-align: bottom;
+    }
+}
+
+/*_______________________Header______________________*/
 header{
     text-align: center;
     padding: 20px 0 10px 0;
@@ -21,14 +146,14 @@ header{
     }
 }
 
-/* First section : Reservation */
+/*___________First section : reservation_____________*/
 .top-container{
     width: 100%;
     text-align: center;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    /* Location */
+    /*________________Location_______________________*/
     &__location{
         display: flex;
         justify-content: center;
@@ -40,6 +165,7 @@ header{
             background-color: $bg-grey;
             border: none;
             width: 140px;
+            padding: 5px;
         }
         ::placeholder{
             color: black;
@@ -52,7 +178,7 @@ header{
             margin-right: 10px;
         }
     }
-    /* Searching block */
+    /*________________Searching block___________________*/
     &__reservation{
         background-color: $bg-lightgrey;
         padding: 30px 5px 50px 5px;
@@ -70,10 +196,14 @@ header{
         margin: 20px auto 0 auto;
         width: 250px;
         cursor: pointer;
+        &:hover{
+            box-shadow: 0px 2px 10px rgb(50 50 50);
+            opacity: 0.9;
+        }
     }
 }
 
-/* Second section : Running block */
+/*___________Second section : Running block_____________*/
 .process{
     display: flex;
     flex-direction: column;
@@ -94,6 +224,7 @@ header{
     height: 80px;
     &:hover{
         background-color: #f5edff;
+        box-shadow: 0px 2px 10px rgb(135 133 133);
         .process-steps__picto{
             color: $primary-color;
         }
@@ -116,6 +247,7 @@ header{
     }
 }
 
+/*___________Third section : Restaurant's list_____________*/
 .restaurants{
     display: flex;
     flex-direction: column;
@@ -125,7 +257,6 @@ header{
         padding-left: 20px;
     }
 }
-
 .restaurants-cards{
     display: flex;
     flex-direction: column;
@@ -135,6 +266,10 @@ header{
     height: 250px;
     width: 90%;
     border-radius: 15px;
+    &:hover, &:active{
+    box-shadow: 0px 2px 10px rgb(50 50 50);
+    opacity: 0.9;
+    }
     a{
         height: 250px;
         width: 100%;
@@ -165,7 +300,6 @@ header{
             padding: 8px;
         }
     }
-
     &__info{
         width: 100%;
         height: 30%;
@@ -191,12 +325,37 @@ header{
     &__place{
         margin: 0;
     }
-    &__picto{
-        margin: 0;
+    &__heart{
+        position: relative;
+        right: 5px;
+        width: 25px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
         font-size: x-large;
+    }
+    &__heart--full{
+        position: absolute;
+        font-size: x-large;
+        background: linear-gradient($primary-color, $secondary-color);
+        -webkit-background-clip: text;
+        background-clip: text;
+        color: transparent;
+        z-index: 2;
+        opacity: 0;
+        transition: opacity 400ms;
+    }
+    &__heart--full:hover, &__heart--full:active{
+        opacity: 1;
+    }
+    &__heart--empty{
+        position: absolute;
+        font-size: x-large;
+        z-index: 1;
     }
 }
 
+/*____________________Footer_____________________*/
 footer{
     background-color: $bg-darkgrey;
     color: white;
@@ -217,32 +376,31 @@ footer{
     }
 }
 
+/*____________________________MEDIA QUERIES_________________________*/
 
-/* Responsive design : tablet */
+/*_____________________Responsive design : tablet___________________*/
 @media all and (min-width: 768px) and (max-width: 992px){
 
-    header{
-        height: 150px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        img{
-            max-width: 350px;
-        }
+header{
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    img{
+        max-width: 350px;
     }
-
-    .top-container{
-        &__location{
-        height: 80px;
-        font-size: x-large;
-        input{
-            width: 220px;
-            padding: 10px;
-        }
-        }
+}
+.top-container{
+    &__location{
+    height: 80px;
+    font-size: x-large;
+    input{
+        width: 220px;
+        padding: 10px;
     }
-
-    .process{
+    }
+}
+.process{
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -254,8 +412,7 @@ footer{
         text-align: center;
     }
 }
-
-    .process-steps{
+.process-steps{
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -270,9 +427,7 @@ footer{
     &__picto{
         margin: 10px 0;
     }
-
 }
-
 .restaurants{
     display: flex;
     flex-direction: row;
@@ -284,12 +439,10 @@ footer{
         margin: 10px 0 40px 0;
     }
 }
-
 .restaurants-cards{
     width: 45%;
     margin: 15px 15px;
 }
-
 footer{
     display: flex;
     flex-direction: column;
@@ -299,23 +452,23 @@ footer{
 }
 } 
 
-/* Responsive design : desktop */
-@media all and (min-width: 992px){
-    header{
-        height: 100px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        img{
-            max-width: 350px;
-        }
+/*_____________________Responsive design : laptop___________________*/
+@media all and (min-width: 992px) and (max-width: 1282px){
+header{
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    img{
+        max-width: 350px;
     }
-    .top-container{
-        input{
-            padding: 10px;
-            width: 150px;
-        }
+}
+.top-container{
+    input{
+        padding: 10px;
+        width: 150px;
     }
+}
 .process{
     display: flex;
     flex-direction: row;
@@ -357,7 +510,86 @@ footer{
         margin: 10px 0 40px 0;
     }
 }
+.restaurants-cards{
+    height: 300px;
+    width: 40%;
+    min-width: 300px;
+    max-width: 500px;
+    margin: 20px;
+    a{
+        height: 300px; 
+    }
+}
+footer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+    text-align: right;
+    i{
+        margin-right: 5px;
+    }
+}
+}
 
+/*_____________________Responsive design : desktop___________________*/
+@media all and (min-width: 1282px){
+header{
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    img{
+        max-width: 350px;
+    }
+}
+.top-container{
+    input{
+        padding: 10px;
+        width: 150px;
+    }
+}
+.process{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    &__heading{
+        width: 100%;
+        margin: 0 0 50px 0;
+        padding: 0;
+        text-align: center;
+    }
+}
+.process-steps{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 150px;
+    width: 30%;
+        &__nbr{
+        margin: -40px 0 20px 0;
+        padding: 10px 15px;
+        border-radius: 50px;
+    }
+    &__picto{
+        margin: 10px 0;
+    }
+}
+.restaurants{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    &__heading{
+        width: 100%;
+        text-align: center;
+        padding: 0;
+        margin: 10px 0 40px 0;
+    }
+}
 .restaurants-cards{
     height: 300px;
     width: 20%;
@@ -374,5 +606,8 @@ footer{
     justify-content: center;
     align-items: flex-end;
     text-align: right;
+    i{
+        margin-right: 5px;
+    }
 }
 }
