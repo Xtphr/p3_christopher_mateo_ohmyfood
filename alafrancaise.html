@@ -4,18 +4,17 @@
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+        <!-- Title -->
+        <title>OhMyFood- À la Française</title>
         <!-- CSS Normalize -->
         <link rel="stylesheet" type="text/css" href="./css/normalize.css">
-        <!-- CSS (mobile first) -->
+        <!-- CSS (mobile first + media queries) -->
         <link rel="stylesheet" type="text/css" href="./css/pages.css">
-        <!-- CSS (tablet & desktop) -->
         <!-- Fontawesome -->
         <script src="https://kit.fontawesome.com/064a8af3d3.js" crossorigin="anonymous"></script>
-
-        <title>OhMyFood- À la Française</title>
     </head>
     <body>
+
         <!-- Header -->
         <header>
             <!-- Navigation bar -->
@@ -25,88 +24,152 @@
             </nav>
         </header>
         <main>
+
             <!-- Banner -->
-            <section class="banner">
-                <img src="./images/restaurants/ala-francaise.jpg">
-            </section>
+            <div class="banner">
+                <img src="./images/restaurants/ala-francaise.jpg" alt="restaurant à la française">
+            </div>
+
             <!-- Restaurant's menu heading -->
             <section class="menu">
                 <div class="menu__heading">
                     <h1>À la française</h1>
-                    <p><i class="fa-regular fa-heart"></i></p>
+                    <div class="menu__heart">
+                        <p class="menu__heart menu__heart--empty"><i class="fa-regular fa-heart"></i></p>
+                        <p class="menu__heart menu__heart--full"><i class="fa-solid fa-heart"></i></p>
+                    </div>
                 </div>
+
                 <!-- Starters -->
                 <article class="menu__list">
                     <h2>Entrées</h2>
-                        <!-- "Tartare de poulpe acidulé" -->
-                        <div class="menu__box">
-                            <div class="menu__entitled"><h3>Tartare de poulpe acidulé</h3>
-                            <p>Aux zestes d'orange</p></div>
+
+                    <!-- "Tartare de poulpe acidulé" -->
+                    <div class="menu__box menu__box--slidein1 menu__box--slidedown1">
+                        <div class="menu__entitled">
+                            <h3>Tartare de poulpe acidulé</h3>
+                            <p>Aux zestes d'orange</p>
+                        </div>
+                        <div class="menu__checkbox">
                             <div class="menu__price"><p>25€</p></div>
+                            <div class="menu__checkbox--checked"><i class="fa-solid fa-circle-check"></i></div>
                         </div>
-                        <!-- "Velouté de légumes d'antan" -->
-                        <div class="menu__box">
-                            <div class="menu__entitled"><h3>Velouté de légumes d'antan</h3>
-                            <p>Carotte, panais, topinambour</p></div>
+                    </div>
+
+                    <!-- "Velouté de légumes d'antan" -->
+                    <div class="menu__box menu__box--slidein2 menu__box--slidedown2">
+                        <div class="menu__entitled">
+                            <h3>Velouté de légumes d'antan</h3>
+                            <p>Carotte, panais, topinambour</p>
+                        </div>
+                        <div class="menu__checkbox">
                             <div class="menu__price"><p>35€</p></div>
+                            <div class="menu__checkbox--checked"><i class="fa-solid fa-circle-check"></i></div>
                         </div>
-                        <!-- "Soupe à l'oignon" -->
-                        <div class="menu__box">
-                            <div class="menu__entitled"><h3>Soupe à l'oignon</h3>
-                            <p>Revisitée</p></div>
+                    </div>
+
+                    <!-- "Soupe à l'oignon" -->
+                    <div class="menu__box menu__box--slidein3 menu__box--slidedown3">
+                        <div class="menu__entitled">
+                            <h3>Soupe à l'oignon</h3>
+                            <p>Revisitée</p>
+                        </div>
+                        <div class="menu__checkbox">
                             <div class="menu__price"><p>20€</p></div>
+                            <div class="menu__checkbox--checked"><i class="fa-solid fa-circle-check"></i></div>
                         </div>
+                    </div>
                 </article>
+
                 <!-- Main dishes -->
                 <article class="menu__list">
                     <h2>Plats</h2>
-                        <!-- "Coquilles Saint-Jacques" -->
-                        <div class="menu__box">
-                            <div class="menu__entitled"><h3>Coquilles Saint-Jacques</h3>
-                            <p>Accompagnées d'une purée de panais</p></div>
+
+                    <!-- "Coquilles Saint-Jacques" -->
+                    <div class="menu__box menu__box--slidein1 menu__box--slidedown1">
+                        <div class="menu__entitled">
+                            <h3>Coquilles Saint-Jacques</h3>
+                            <p>Accompagnées d'une purée de panais</p>
+                        </div>
+                        <div class="menu__checkbox">
                             <div class="menu__price"><p>40€</p></div>
+                            <div class="menu__checkbox--checked"><i class="fa-solid fa-circle-check"></i></div>
                         </div>
-                        <!-- "Magret de canard" -->
-                        <div class="menu__box">
-                            <div class="menu__entitled"><h3>Magret de canard</h3>
-                            <p>Et parmentier de pommes de terre</p></div>
+                    </div>
+
+                    <!-- "Magret de canard" -->
+                    <div class="menu__box menu__box--slidein2 menu__box--slidedown2">
+                        <div class="menu__entitled">
+                            <h3>Magret de canard</h3>
+                            <p>Et parmentier de pommes de terre</p>
+                        </div>
+                        <div class="menu__checkbox">
                             <div class="menu__price"><p>35€</p></div>
+                            <div class="menu__checkbox--checked"><i class="fa-solid fa-circle-check"></i></div>
                         </div>
-                        <!-- "Pigeonneau d'Ille-et-Vilaine" -->
-                        <div class="menu__box">
-                            <div class="menu__entitled"><h3>Pigeonneau d'Ille-et-Vilaine</h3>
-                            <p>Sur son lit de gnocchis aux légumes</p></div>
+                    </div>
+
+                    <!-- "Pigeonneau d'Ille-et-Vilaine" -->
+                    <div class="menu__box menu__box--slidein3 menu__box--slidedown3">
+                        <div class="menu__entitled">
+                            <h3>Pigeonneau d'Ille-et-Vilaine</h3>
+                            <p>Sur son lit de gnocchis aux légumes</p>
+                        </div>
+                        <div class="menu__checkbox">
                             <div class="menu__price"><p>44€</p></div>
+                            <div class="menu__checkbox--checked"><i class="fa-solid fa-circle-check"></i></div>
                         </div>
+                    </div>
                 </article>
+
                 <!-- Desserts -->
                 <article class="menu__list">
                     <h2>Desserts</h2>
-                        <!-- "Pétales de violettes glacés" -->
-                        <div class="menu__box">
-                            <div class="menu__entitled"><h3>Pétales de violettes glacés</h3>
-                            <p>Et purée de noisettes</p></div>
+
+                    <!-- "Pétales de violettes glacés" -->
+                    <div class="menu__box menu__box--slidein1 menu__box--slidedown1">
+                        <div class="menu__entitled">
+                            <h3>Pétales de violettes glacés</h3>
+                            <p>Et purée de noisettes</p>
+                        </div>
+                        <div class="menu__checkbox">
                             <div class="menu__price"><p>18€</p></div>
+                            <div class="menu__checkbox--checked"><i class="fa-solid fa-circle-check"></i></div>
                         </div>
-                        <!-- "Fondant au chocolat" -->
-                        <div class="menu__box">
-                            <div class="menu__entitled"><h3>Fondant au chocolat</h3>
-                            <p>Revisité</p></div>
+                    </div>
+
+                    <!-- "Fondant au chocolat" -->
+                    <div class="menu__box menu__box--slidein2 menu__box--slidedown2">
+                        <div class="menu__entitled">
+                            <h3>Fondant au chocolat</h3>
+                            <p>Revisité</p>
+                        </div>
+                        <div class="menu__checkbox">
                             <div class="menu__price"><p>22€</p></div>
+                            <div class="menu__checkbox--checked"><i class="fa-solid fa-circle-check"></i></div>
                         </div>
-                        <!-- "Millefeuille croustillant" -->
-                        <div class="menu__box">
-                            <div class="menu__entitled"><h3>Millefeuille croustillant</h3>
-                            <p>Myrtilles et pâte d'amande</p></div>
+                    </div>
+
+                    <!-- "Millefeuille croustillant" -->
+                    <div class="menu__box menu__box--slidein3 menu__box--slidedown3">
+                        <div class="menu__entitled">
+                            <h3>Millefeuille croustillant</h3>
+                            <p>Myrtilles et pâte d'amande</p>
+                        </div>
+                        <div class="menu__checkbox">
                             <div class="menu__price"><p>23€</p></div>
+                            <div class="menu__checkbox--checked"><i class="fa-solid fa-circle-check"></i></div>
                         </div>
+                    </div>
                 </article>
+
                 <!-- Menu command button -->
                 <div class="menu__button">
                     <button>Commander</button>
                 </div>
             </section>
         </main>
+
         <!-- Footer -->
         <footer>
             <h2 id="footer">ohmyfood</h2>
@@ -114,7 +177,7 @@
                 <li><a href="#footer"><i class="fa-solid fa-utensils"></i>Proposer un restaurant</a></li>
                 <li><a href="#footer"><i class="fa-solid fa-handshake-angle"></i>Devenir partenaire</a></li>
                 <li><a href="#footer">Mentions légales</a></li>
-                <li><a href="#footer">Contact</a></li>
+                <li><a href="mailto:contact@ohmyfood.com">Contact</a></li>
             </ul>
         </footer>
     </body>

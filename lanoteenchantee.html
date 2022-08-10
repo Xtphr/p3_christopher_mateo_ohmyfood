@@ -4,18 +4,17 @@
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+        <!-- Title -->
+        <title>OhMyFood- La Note Enchantée</title>
         <!-- CSS Normalize -->
         <link rel="stylesheet" type="text/css" href="./css/normalize.css">
-        <!-- CSS (mobile first) -->
+        <!-- CSS (mobile first + media queries) -->
         <link rel="stylesheet" type="text/css" href="./css/pages.css">
-        <!-- CSS (tablet & desktop) -->
         <!-- Fontawesome -->
         <script src="https://kit.fontawesome.com/064a8af3d3.js" crossorigin="anonymous"></script>
-
-        <title>OhMyFood- La Note Enchantée</title>
     </head>
     <body>
+
         <!-- Header -->
         <header>
             <!-- Navigation bar -->
@@ -25,94 +24,164 @@
             </nav>
         </header>
         <main>
+
             <!-- Banner -->
-            <section class="banner">
-                <img src="./images/restaurants/note-enchantee.jpg">
-            </section>
+            <div class="banner">
+                <img src="./images/restaurants/note-enchantee.jpg" alt="restaurant la note enchantée">
+            </div>
+
             <!-- Restaurant's menu heading -->
             <section class="menu">
                 <div class="menu__heading">
                     <h1>La note enchantée</h1>
-                    <p><i class="fa-regular fa-heart"></i></p>
+                    <div class="menu__heart">
+                        <p class="menu__heart menu__heart--empty"><i class="fa-regular fa-heart"></i></p>
+                        <p class="menu__heart menu__heart--full"><i class="fa-solid fa-heart"></i></p>
+                    </div>
                 </div>
+
                 <!-- Starters -->
                 <article class="menu__list">
                     <h2>Entrées</h2>
-                        <!-- "Ravioles de foie gras" -->
-                        <div class="menu__box">
-                            <div class="menu__entitled"><h3>Ravioles de foie gras</h3>
-                            <p>Accompagnés de leur crème à la truffe</p></div>
+
+                    <!-- "Ravioles de foie gras" -->
+                    <div class="menu__box menu__box--slidein1 menu__box--slidedown1">
+                        <div class="menu__entitled">
+                            <h3>Ravioles de foie gras</h3>
+                            <p>Accompagnés de leur crème à la truffe</p>
+                        </div>
+                        <div class="menu__checkbox">
                             <div class="menu__price"><p>25€</p></div>
+                            <div class="menu__checkbox--checked"><i class="fa-solid fa-circle-check"></i></div>
+                        </div> 
+                    </div>
+
+                    <!-- "Caviar osciètre" -->
+                    <div class="menu__box menu__box--slidein2 menu__box--slidedown2">
+                        <div class="menu__entitled">
+                            <h3>Caviar osciètre</h3>
+                            <p>Sur blini à la farine de blé noir</p>
                         </div>
-                        <!-- "Caviar osciètre" -->
-                        <div class="menu__box">
-                            <div class="menu__entitled"><h3>Caviar osciètre</h3>
-                            <p>Sur blini à la farine de blé noir</p></div>
+                        <div class="menu__checkbox">
                             <div class="menu__price"><p>35€</p></div>
+                            <div class="menu__checkbox--checked"><i class="fa-solid fa-circle-check"></i></div>
                         </div>
-                        <!-- "Homard et espuma de potiron" -->
-                        <div class="menu__box">
-                            <div class="menu__entitled"><h3>Homard et espuma de potiron</h3>
-                            <p>Mariné aux zestes d'orange</p></div>
+                    </div>
+
+                    <!-- "Homard et espuma de potiron" -->
+                    <div class="menu__box menu__box--slidein3 menu__box--slidedown3">
+                        <div class="menu__entitled">
+                            <h3>Homard et espuma de potiron</h3>
+                            <p>Mariné aux zestes d'orange</p>
+                        </div>
+                        <div class="menu__checkbox">
                             <div class="menu__price"><p>20€</p></div>
+                            <div class="menu__checkbox--checked"><i class="fa-solid fa-circle-check"></i></div>
                         </div>
-                        <!-- Foie gras de canard cuit entier -->
-                        <div class="menu__box">
-                            <div class="menu__entitled"><h3>Foie gras de canard cuit entier</h3>
-                            <p>Confiture de figue et pain toasté</p></div>
+                    </div>
+
+                    <!-- Foie gras de canard cuit entier -->
+                    <div class="menu__box menu__box--slidein4 menu__box--slidedown4">
+                        <div class="menu__entitled">
+                            <h3>Foie gras de canard cuit entier</h3>
+                            <p>Confiture de figue et pain toasté</p>
+                        </div>
+                        <div class="menu__checkbox">
                             <div class="menu__price"><p>35€</p></div>
+                            <div class="menu__checkbox--checked"><i class="fa-solid fa-circle-check"></i></div>
                         </div>
+                    </div>
                 </article>
+
                 <!-- Main dishes -->
                 <article class="menu__list">
                     <h2>Plats</h2>
-                        <!-- "Noix de coquilles Saint-Jacques" -->
-                        <div class="menu__box">
-                            <div class="menu__entitled"><h3>Noix de coquilles Saint-Jacques</h3>
-                            <p>Sur lit de purée de céleri-rave</p></div>
+
+                    <!-- "Noix de coquilles Saint-Jacques" -->
+                    <div class="menu__box menu__box--slidein1 menu__box--slidedown1">
+                        <div class="menu__entitled">
+                            <h3>Noix de coquilles Saint-Jacques</h3>
+                            <p>Sur lit de purée de céleri-rave</p>
+                        </div>
+                        <div class="menu__checkbox">
                             <div class="menu__price"><p>40€</p></div>
+                            <div class="menu__checkbox--checked"><i class="fa-solid fa-circle-check"></i></div>
                         </div>
-                        <!-- "Langoustine poêlée" -->
-                        <div class="menu__box">
-                            <div class="menu__entitled"><h3>Langoustine poêlée</h3>
-                            <p>Purée de patate douce</p></div>
+                    </div>
+
+                    <!-- "Langoustine poêlée" -->
+                    <div class="menu__box menu__box--slidein2 menu__box--slidedown2">
+                        <div class="menu__entitled">
+                            <h3>Langoustine poêlée</h3>
+                            <p>Purée de patate douce</p>
+                        </div>
+                        <div class="menu__checkbox">
                             <div class="menu__price"><p>35€</p></div>
+                            <div class="menu__checkbox--checked"><i class="fa-solid fa-circle-check"></i></div>
                         </div>
-                        <!-- "Mijoté de queue de boeuf" -->
-                        <div class="menu__box">
-                            <div class="menu__entitled"><h3>Mijoté de queue de boeuf</h3>
-                            <p>Et riz sauvage aux zestes de citron</p></div>
+                    </div>
+
+                    <!-- "Mijoté de queue de boeuf" -->
+                    <div class="menu__box menu__box--slidein3 menu__box--slidedown3">
+                        <div class="menu__entitled">
+                            <h3>Mijoté de queue de boeuf</h3>
+                            <p>Et riz sauvage aux zestes de citron</p>
+                        </div>
+                        <div class="menu__checkbox">
                             <div class="menu__price"><p>44€</p></div>
+                            <div class="menu__checkbox--checked"><i class="fa-solid fa-circle-check"></i></div>
                         </div>
+                    </div>
                 </article>
+
                 <!-- Desserts -->
                 <article class="menu__list">
                     <h2>Desserts</h2>
-                        <!-- "Macaron noisette et chocolat" -->
-                        <div class="menu__box">
-                            <div class="menu__entitled"><h3>Macaron noisette et chocolat</h3>
-                            <p>Glace au caramel brun et sel de Guérande</p></div>
+
+                    <!-- "Macaron noisette et chocolat" -->
+                    <div class="menu__box menu__box--slidein1 menu__box--slidedown1">
+                        <div class="menu__entitled">
+                            <h3>Macaron noisette et chocolat</h3>
+                            <p>Glace au caramel brun et sel de Guérande</p>
+                        </div>
+                        <div class="menu__checkbox">
                             <div class="menu__price"><p>18€</p></div>
+                            <div class="menu__checkbox--checked"><i class="fa-solid fa-circle-check"></i></div>
                         </div>
-                        <!-- "Baba au rhum revisité" -->
-                        <div class="menu__box">
-                            <div class="menu__entitled"><h3>Baba au rhum revisité</h3>
-                            <p>Avec son coulis de citron</p></div>
+                    </div>
+
+                    <!-- "Baba au rhum revisité" -->
+                    <div class="menu__box menu__box--slidein2 menu__box--slidedown2">
+                        <div class="menu__entitled">
+                            <h3>Baba au rhum revisité</h3>
+                            <p>Avec son coulis de citron</p>
+                        </div>
+                        <div class="menu__checkbox">
                             <div class="menu__price"><p>22€</p></div>
+                            <div class="menu__checkbox--checked"><i class="fa-solid fa-circle-check"></i></div>
                         </div>
-                        <!-- "Tarte au citron meringuée" -->
-                        <div class="menu__box">
-                            <div class="menu__entitled"><h3>Tarte au citron meringuée</h3>
-                            <p>Déstructurée</p></div>
+                    </div>
+
+                    <!-- "Tarte au citron meringuée" -->
+                    <div class="menu__box menu__box--slidein3 menu__box--slidedown3">
+                        <div class="menu__entitled">
+                            <h3>Tarte au citron meringuée</h3>
+                            <p>Déstructurée</p>
+                        </div>
+                        <div class="menu__checkbox">
                             <div class="menu__price"><p>23€</p></div>
+                            <div class="menu__checkbox--checked"><i class="fa-solid fa-circle-check"></i></div>
                         </div>
+                    </div>
                 </article>
+
                 <!-- Menu command button -->
                 <div class="menu__button">
                     <button>Commander</button>
                 </div>
             </section>
         </main>
+
         <!-- Footer -->
         <footer>
             <h2 id="footer">ohmyfood</h2>
@@ -120,7 +189,7 @@
                 <li><a href="#footer"><i class="fa-solid fa-utensils"></i>Proposer un restaurant</a></li>
                 <li><a href="#footer"><i class="fa-solid fa-handshake-angle"></i>Devenir partenaire</a></li>
                 <li><a href="#footer">Mentions légales</a></li>
-                <li><a href="#footer">Contact</a></li>
+                <li><a href="mailto:contact@ohmyfood.com">Contact</a></li>
             </ul>
         </footer>
     </body>

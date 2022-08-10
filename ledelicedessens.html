@@ -4,18 +4,17 @@
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+        <!-- Title -->
+        <title>OhMyFood- Le Délice des Sens</title>
         <!-- CSS Normalize -->
         <link rel="stylesheet" type="text/css" href="./css/normalize.css">
-        <!-- CSS (mobile first) -->
+        <!-- CSS (mobile first + media queries) -->
         <link rel="stylesheet" type="text/css" href="./css/pages.css">
-        <!-- CSS (tablet & desktop) -->
         <!-- Fontawesome -->
         <script src="https://kit.fontawesome.com/064a8af3d3.js" crossorigin="anonymous"></script>
-
-        <title>OhMyFood- Le Délice des Sens</title>
     </head>
     <body>
+
         <!-- Header -->
         <header>
             <!-- Navigation bar -->
@@ -25,88 +24,152 @@
             </nav>
         </header>
         <main>
+            
             <!-- Banner -->
-            <section class="banner">
-                <img src="./images/restaurants/delices-des-sens.jpg">
-            </section>
+            <div class="banner">
+                <img src="./images/restaurants/delices-des-sens.jpg" alt="restaurant le délice des sens">
+            </div>
+
             <!-- Restaurant's menu heading -->
             <section class="menu">
                 <div class="menu__heading">
                     <h1>Le délice des sens</h1>
-                    <p><i class="fa-regular fa-heart"></i></p>
+                    <div class="menu__heart">
+                        <p class="menu__heart menu__heart--empty"><i class="fa-regular fa-heart"></i></p>
+                        <p class="menu__heart menu__heart--full"><i class="fa-solid fa-heart"></i></p>
+                    </div>
                 </div>
+
                 <!-- Starters -->
                 <article class="menu__list">
                     <h2>Entrées</h2>
-                        <!-- "Tartare de thon" -->
-                        <div class="menu__box">
-                            <div class="menu__entitled"><h3>Tartare de thon</h3>
-                            <p>Assaisoné au yuzu</p></div>
+
+                    <!-- "Tartare de thon" -->
+                    <div class="menu__box menu__box--slidein1 menu__box--slidedown1">
+                        <div class="menu__entitled">
+                            <h3>Tartare de thon</h3>
+                            <p>Assaisoné au yuzu</p>
+                        </div>
+                        <div class="menu__checkbox">
                             <div class="menu__price"><p>25€</p></div>
+                            <div class="menu__checkbox--checked"><i class="fa-solid fa-circle-check"></i></div>
                         </div>
-                        <!-- "Bouchée de homard croustillant" -->
-                        <div class="menu__box">
-                            <div class="menu__entitled"><h3>Bouchée de homard croustillant</h3>
-                            <p>Et sa farandole de petits légumes</p></div>
+                    </div>
+
+                    <!-- "Bouchée de homard croustillant" -->
+                    <div class="menu__box menu__box--slidein2 menu__box--slidedown2">
+                        <div class="menu__entitled">
+                            <h3>Bouchée de homard croustillant</h3>
+                            <p>Et sa farandole de petits légumes</p>
+                        </div>
+                        <div class="menu__checkbox">
                             <div class="menu__price"><p>35€</p></div>
+                            <div class="menu__checkbox--checked"><i class="fa-solid fa-circle-check"></i></div>
                         </div>
-                        <!-- "Velouté de cèpes" -->
-                        <div class="menu__box">
-                            <div class="menu__entitled"><h3>Velouté de cèpes</h3>
-                            <p>Aux truffes</p></div>
+                    </div>
+                    
+                    <!-- "Velouté de cèpes" -->
+                    <div class="menu__box menu__box--slidein3 menu__box--slidedown3">
+                        <div class="menu__entitled">
+                            <h3>Velouté de cèpes</h3>
+                            <p>Aux truffes</p>
+                        </div>
+                        <div class="menu__checkbox">
                             <div class="menu__price"><p>20€</p></div>
+                            <div class="menu__checkbox--checked"><i class="fa-solid fa-circle-check"></i></div>
                         </div>
+                    </div>
                 </article>
+
                 <!-- Main dishes -->
                 <article class="menu__list">
                     <h2>Plats</h2>
-                        <!-- "Poulet rôti aux herbes de Provence" -->
-                        <div class="menu__box">
-                            <div class="menu__entitled"><h3>Poulet rôti aux herbes de Provence</h3>
-                            <p>Et sa crème de truffe</p></div>
+
+                    <!-- "Poulet rôti aux herbes de Provence" -->
+                    <div class="menu__box menu__box--slidein1 menu__box--slidedown1">
+                        <div class="menu__entitled">
+                            <h3>Poulet rôti aux herbes de Provence</h3>
+                            <p>Et sa crème de truffe</p>
+                        </div>
+                        <div class="menu__checkbox">
                             <div class="menu__price"><p>40€</p></div>
+                            <div class="menu__checkbox--checked"><i class="fa-solid fa-circle-check"></i></div>
                         </div>
-                        <!-- "Langouste rôtie" -->
-                        <div class="menu__box">
-                            <div class="menu__entitled"><h3>Langouste rôtie</h3>
-                            <p>ET ses légumes de saison</p></div>
+                    </div>
+
+                    <!-- "Langouste rôtie" -->
+                    <div class="menu__box menu__box--slidein2 menu__box--slidedown2">
+                        <div class="menu__entitled">
+                            <h3>Langouste rôtie</h3>
+                            <p>ET ses légumes de saison</p>
+                        </div>
+                        <div class="menu__checkbox">
                             <div class="menu__price"><p>35€</p></div>
+                            <div class="menu__checkbox--checked"><i class="fa-solid fa-circle-check"></i></div>
                         </div>
-                        <!-- "Côte de boeuf Angus" -->
-                        <div class="menu__box">
-                            <div class="menu__entitled"><h3>Côte de boeuf Angus</h3>
-                            <p>Et sa purée de panais</p></div>
+                    </div>
+
+                    <!-- "Côte de boeuf Angus" -->
+                    <div class="menu__box menu__box--slidein3 menu__box--slidedown3">
+                        <div class="menu__entitled">
+                            <h3>Côte de boeuf Angus</h3>
+                            <p>Et sa purée de panais</p>
+                        </div>
+                        <div class="menu__checkbox">
                             <div class="menu__price"><p>44€</p></div>
+                            <div class="menu__checkbox--checked"><i class="fa-solid fa-circle-check"></i></div>
                         </div>
+                    </div>
                 </article>
+
                 <!-- Desserts -->
                 <article class="menu__list">
                     <h2>Desserts</h2>
-                        <!-- "Farandole de desserts" -->
-                        <div class="menu__box">
-                            <div class="menu__entitled"><h3>Farandole de desserts</h3>
-                            <p>Du chef</p></div>
+
+                    <!-- "Farandole de desserts" -->
+                    <div class="menu__box menu__box--slidein1 menu__box--slidedown1">
+                        <div class="menu__entitled">
+                            <h3>Farandole de desserts</h3>
+                            <p>Du chef</p>
+                        </div>
+                        <div class="menu__checkbox">
                             <div class="menu__price"><p>18€</p></div>
+                            <div class="menu__checkbox--checked"><i class="fa-solid fa-circle-check"></i></div>
                         </div>
-                        <!-- "Crème brulée" -->
-                        <div class="menu__box">
-                            <div class="menu__entitled"><h3>Crème brulée</h3>
-                            <p>Revisitée</p></div>
+                    </div>
+
+                    <!-- "Crème brulée" -->
+                    <div class="menu__box menu__box--slidein2 menu__box--slidedown2">
+                        <div class="menu__entitled">
+                            <h3>Crème brulée</h3>
+                            <p>Revisitée</p>
+                        </div>
+                        <div class="menu__checkbox">
                             <div class="menu__price"><p>22€</p></div>
+                            <div class="menu__checkbox--checked"><i class="fa-solid fa-circle-check"></i></div>
                         </div>
-                        <!-- "Tiramisu" -->
-                        <div class="menu__box">
-                            <div class="menu__entitled"><h3>Tiramisu</h3>
-                            <p>À la noisette</p></div>
+                    </div>
+
+                    <!-- "Tiramisu" -->
+                    <div class="menu__box menu__box--slidein3 menu__box--slidedown3">
+                        <div class="menu__entitled">
+                            <h3>Tiramisu</h3>
+                            <p>À la noisette</p>
+                        </div>
+                        <div class="menu__checkbox">
                             <div class="menu__price"><p>23€</p></div>
+                            <div class="menu__checkbox--checked"><i class="fa-solid fa-circle-check"></i></div>
                         </div>
+                    </div>
                 </article>
+
                 <!-- Menu command button -->
                 <div class="menu__button">
                     <button>Commander</button>
                 </div>
             </section>
         </main>
+
         <!-- Footer -->
         <footer>
             <h2 id="footer">ohmyfood</h2>
@@ -114,7 +177,7 @@
                 <li><a href="#footer"><i class="fa-solid fa-utensils"></i>Proposer un restaurant</a></li>
                 <li><a href="#footer"><i class="fa-solid fa-handshake-angle"></i>Devenir partenaire</a></li>
                 <li><a href="#footer">Mentions légales</a></li>
-                <li><a href="#footer">Contact</a></li>
+                <li><a href="mailto:contact@ohmyfood.com">Contact</a></li>
             </ul>
         </footer>
     </body>
